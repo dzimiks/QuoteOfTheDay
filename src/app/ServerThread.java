@@ -40,6 +40,8 @@ public class ServerThread implements Runnable {
 
         this.jsonQuotes.add(Constants.LOCAL_QUOTE_1);
         this.jsonQuotes.add(Constants.LOCAL_QUOTE_2);
+        this.jsonQuotes.add(Constants.LOCAL_QUOTE_3);
+        this.jsonQuotes.add(Constants.LOCAL_QUOTE_4);
         this.jsonQuotes.add(Constants.PRINCESS_DIANA_LOCAL_QUOTE);
     }
 
