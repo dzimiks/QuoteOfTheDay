@@ -119,8 +119,8 @@ public class ServerThread implements Runnable {
         String quote = object.get("quote").getAsString();
         String author = object.get("author").getAsString();
 
-        return "<div class=\"quote\"><blockquote><h1>"
-                + quote + "</h1></blockquote>" + "<h3>"
-                + author + "</h3></div>";
+        return "<div class=\"quote\"><div class=\"blockquote-wrapper\"><div class=\"blockquote\"><h1>"
+                + quote + "</h1><h4>"
+                + author + "</h4></div></div></div>";
     }
 }
