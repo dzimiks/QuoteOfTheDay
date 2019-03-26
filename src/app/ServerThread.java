@@ -33,6 +33,13 @@ public class ServerThread implements Runnable {
                 line = bufferedReader.readLine();
             }
 
+            // TODO
+            String response = Constants.RESPONSE + Constants.NEW_LINE_x2;
+            System.out.println("RESPONSE: " + response);
+
+            response += "<html><head><title>TEST</title></head><body><h1>TEST HEADING</h1></body></html>";
+
+            printWriter.println(response);
             bufferedReader.close();
             printWriter.close();
             socket.close();
