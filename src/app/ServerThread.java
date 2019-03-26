@@ -118,9 +118,12 @@ public class ServerThread implements Runnable {
         JsonObject object = latestQuote.getAsJsonObject();
         String quote = object.get("quote").getAsString();
         String author = object.get("author").getAsString();
+        String date = object.get("date").getAsString();
 
         return "<div class=\"quote\"><div class=\"blockquote-wrapper\"><div class=\"blockquote\"><h1>"
                 + quote + "</h1><h4>"
-                + author + "</h4></div></div></div>";
+                + author + "</h4><p class=\"text-muted\">"
+                + date + "</p>"
+                + "</div></div></div>";
     }
 }
