@@ -10,18 +10,18 @@ import java.net.Socket;
  */
 public class MainServer {
 
-    public static void main(String[] args) {
-        try {
-            ServerSocket serverSocket = new ServerSocket(Constants.PORT);
-            System.out.println("Server is running on port " + Constants.PORT);
+	public static void main(String[] args) {
+		try {
+			ServerSocket serverSocket = new ServerSocket(Constants.PORT);
+			System.out.println("Server is running on port " + Constants.PORT);
 
-            while (true) {
-                Socket socket = serverSocket.accept();
-                ServerThread serverThread = new ServerThread(socket);
-                new Thread(serverThread).start();
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+			while (true) {
+				Socket socket = serverSocket.accept();
+				ServerThread serverThread = new ServerThread(socket);
+				new Thread(serverThread).start();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 }
